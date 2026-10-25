@@ -15,6 +15,6 @@ yarn build-storybook    # static build in packages/docs/storybook-static
 
 Component stories and MDX live next to the components in `packages/core`.
 
-Add the logo as `public/logo.svg` and set `brandImage` in `.storybook/theme.ts`.
+The sidebar logo is `public/logo.svg` (set as `brandImage` in `.storybook/theme.ts`).
 
 Deployed to GitHub Pages on every push to `main`: https://kartikpd19.github.io/GG-Design-System/

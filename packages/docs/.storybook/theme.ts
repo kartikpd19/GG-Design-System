@@ -6,7 +6,7 @@ export default create({
   base: "light",
   brandTitle: "Good Game Design System",
   brandUrl: "https://github.com/kartikpd19/GG-Design-System",
-  // Add the logo as packages/docs/public/logo.svg, then set: brandImage: "./logo.svg"
+  brandImage: "./logo.svg",
   brandTarget: "_self",
 
   colorPrimary: "#7657cd",
