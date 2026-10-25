@@ -1,7 +1,13 @@
 /*
  * Good Game elevation (shadow) tokens.
- * Source: Figma "GG Design System V1.3" → Elevation page.
- *
- * NOT YET MAPPED: the Elevation page could not be read (Figma MCP call limit).
- * Tokens will be added here once the four elevation levels are confirmed.
+ * Levels and names: Figma "GG Design System V1.3" → Elevation page.
+ * Values: monday Vibe shadows (the GG file is Vibe-based); not read from Figma
+ * directly. Re-check against Figma's Effects panel when possible.
  */
+
+:root {
+  --box-shadow-small: 0px 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --box-shadow-medium: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  --box-shadow-large: 0px 6px 20px rgba(0, 0, 0, 0.2);
+  --box-shadow-extra-large: 0px 15px 50px rgba(0, 0, 0, 0.3);
+}

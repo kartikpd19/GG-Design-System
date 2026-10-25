@@ -4,3 +4,10 @@
   href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
   rel="stylesheet"
 />
+<style>
+  /* Hide the page/story icons in front of sidebar items */
+  .sidebar-item > a > div:has(> svg[type="document"]),
+  .sidebar-item > a > div:has(> svg[type="story"]) {
+    display: none;
+  }
+</style>

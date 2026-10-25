@@ -228,6 +228,13 @@ export const spacingScale: TokenDoc[] = [
   { name: "space-80", description: "Use for patterns, or an increased spacing layout" },
 ];
 
+export const elevationScale: (TokenDoc & { size: number })[] = [
+  { name: "box-shadow-small", description: "Small elements", size: 40 },
+  { name: "box-shadow-medium", description: "Medium elements", size: 56 },
+  { name: "box-shadow-large", description: "Large elements", size: 104 },
+  { name: "box-shadow-extra-large", description: "Extra large elements", size: 160 },
+];
+
 export const radiusScale: TokenDoc[] = [
   {
     name: "border-radius-small",

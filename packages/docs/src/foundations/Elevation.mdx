@@ -1,9 +1,18 @@
-import { Meta } from "@storybook/blocks";
+import { Meta, Source } from "@storybook/blocks";
+import { ElevationScale } from "./Foundations";
 
 <Meta title="Foundations/Elevation" />
 
 # Elevation
 
-Shadows express the level of elevation between surfaces. Use them consistently: items with the same shadow can't occupy the same space.
+Shadows express the level of elevation between surfaces. They must be used consistently throughout your product. Use shadow to explain interactions. Items with the same shadow can't occupy the same space.
 
-> **Not mapped yet.** The Figma Elevation page defines four levels. Their shadow values haven't been imported into `@goodgame/style` yet, so no elevation tokens exist in code.
+<Source
+  language="css"
+  dark
+  code={`.popover {
+  box-shadow: var(--box-shadow-medium);
+}`}
+/>
+
+<ElevationScale />

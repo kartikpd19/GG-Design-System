@@ -7,6 +7,6 @@ All notable changes to this project are documented here. Package changelogs are 
 ### Added
 
 - Monorepo setup: Lerna + Yarn workspaces with `@goodgame/core`, `@goodgame/style`, `@goodgame/icons` and `@goodgame/docs`.
-- `@goodgame/style`: color (palette + semantic), typography, spacing, border-radius and focus-ring tokens from Figma.
-- Storybook docs: Introduction, Getting Started, Foundations (Color, Typography, Spacing, Border radius), Catalog and Playground.
+- `@goodgame/style`: color (palette + semantic), typography, spacing, border-radius, elevation and focus-ring tokens.
+- Storybook docs: Introduction, Getting Started, Foundations (Color, Typography, Spacing, Border radius, Elevation), Catalog and Playground.
 - CI, Storybook deploy to GitHub Pages, and release workflows.

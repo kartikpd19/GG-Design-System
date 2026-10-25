@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import styles from "./Foundations.module.css";
 import {
   colorGroups,
+  elevationScale,
   paletteRamps,
   radiusScale,
   rampSteps,
@@ -141,6 +142,31 @@ export function SpacingScale() {
     <div className={styles.table}>
       {spacingScale.map((t) => (
         <SpacingRow key={t.name} {...t} />
+      ))}
+    </div>
+  );
+}
+
+function ElevationSample({ name, description, size }: TokenDoc & { size: number }) {
+  const { ref, value } = useTokenValue(name);
+  return (
+    <div className={styles.elevationCell} ref={ref}>
+      <div
+        className={styles.elevationBox}
+        style={{ width: size, height: size, boxShadow: `var(--${name})` }}
+      />
+      <span className={styles.description}>{description}</span>
+      <code className={styles.tokenName}>--{name}</code>
+      <span className={styles.tokenValue}>{value}</span>
+    </div>
+  );
+}
+
+export function ElevationScale() {
+  return (
+    <div className={styles.elevationGrid}>
+      {[...elevationScale].reverse().map((t) => (
+        <ElevationSample key={t.name} {...t} />
       ))}
     </div>
   );

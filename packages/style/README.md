@@ -34,7 +34,7 @@ import "@goodgame/style"; // all tokens
 | `typography.css` | `--font-h1-bold` … `--font-text3-normal`, letter-spacing        |
 | `spacing.css`    | `--space-2` … `--space-80`                                      |
 | `radius.css`     | `--border-radius-small/medium/large`                            |
-| `shadows.css`    | Elevation (pending)                                             |
+| `shadows.css`    | `--box-shadow-small/medium/large/extra-large`                   |
 | `focus.css`      | Focus ring used by interactive components                       |
 
 Only a light theme exists today. Theme switching uses `[data-theme="light" | "dark"]` on any ancestor.
