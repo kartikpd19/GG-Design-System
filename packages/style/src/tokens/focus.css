@@ -1,0 +1,11 @@
+/*
+ * Focus ring shared by all interactive components.
+ * Not defined in Figma; built from existing color tokens so every component has a
+ * visible keyboard focus indicator (WCAG 2.4.7).
+ */
+
+:root {
+  --focus-ring-width: 2px;
+  --focus-ring-offset: 2px;
+  --focus-ring-color: var(--primary-color);
+}

@@ -1,0 +1,14 @@
+node_modules/
+dist/
+storybook-static/
+coverage/
+*.log
+.env
+.env.*
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+# Raw Figma exports used by scripts/sync-tokens.mjs
+scripts/figma-variables.json

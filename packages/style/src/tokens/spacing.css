@@ -1,0 +1,23 @@
+/*
+ * Good Game spacing tokens.
+ * Source: Figma "GG Design System V1.3" → Spacing page.
+ */
+
+:root {
+  --space-2: 2px;
+  --space-4: 4px;
+  --space-8: 8px;
+  --space-12: 12px;
+  --space-16: 16px;
+  --space-20: 20px;
+  --space-24: 24px;
+  --space-32: 32px;
+  --space-40: 40px;
+  --space-48: 48px;
+  --space-64: 64px;
+  --space-80: 80px;
+
+  /* Legacy aliases referenced by Figma variables */
+  --spacing-xs: var(--space-4);
+  --spacing-medium: var(--space-16);
+}

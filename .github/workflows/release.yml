@@ -1,0 +1,39 @@
+name: Release
+
+# Bumps versions from conventional commits, tags, and publishes changed
+# packages to npm. Requires an NPM_TOKEN repository secret.
+on:
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: "Version bump (leave empty to infer from commits)"
+        required: false
+        type: choice
+        options: ["", patch, minor, major]
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version-file: .nvmrc
+          cache: yarn
+          registry-url: https://registry.npmjs.org
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+      - name: Configure git
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+      - name: Version and publish
+        run: npx lerna publish ${{ inputs.bump }} --yes --create-release github
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

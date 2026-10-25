@@ -1,0 +1,16 @@
+import { Meta } from "@storybook/blocks";
+import { ColorTokens, PaletteRamps } from "./Foundations";
+
+<Meta title="Foundations/Color" />
+
+# Color
+
+Use **semantic tokens** (`--primary-color`, `--primary-text-color`, …) in components. They describe intent, so they can change per theme. The **palette** ramps are primitives that the semantic tokens point at; don't use them in components directly.
+
+Values shown under each swatch are read live from `@goodgame/style`.
+
+<ColorTokens />
+
+## Palette
+
+<PaletteRamps />

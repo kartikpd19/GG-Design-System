@@ -1,0 +1,31 @@
+{
+  "name": "@goodgame/style",
+  "version": "0.1.0",
+  "description": "Design tokens (CSS custom properties) for the Good Game Design System",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kartikpd19/GG-Design-System.git",
+    "directory": "packages/style"
+  },
+  "main": "./src/index.css",
+  "style": "./src/index.css",
+  "exports": {
+    ".": "./src/index.css",
+    "./index.css": "./src/index.css",
+    "./tokens/*": "./src/tokens/*"
+  },
+  "files": [
+    "src"
+  ],
+  "sideEffects": [
+    "*.css"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "typecheck": "echo \"no TypeScript in @goodgame/style\"",
+    "test": "echo \"no tests in @goodgame/style\""
+  }
+}

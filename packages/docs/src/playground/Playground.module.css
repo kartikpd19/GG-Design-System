@@ -1,0 +1,30 @@
+.container {
+  border: 1px solid var(--layout-border-color);
+  border-radius: var(--border-radius-large);
+  overflow: hidden;
+}
+
+.preview {
+  min-height: 200px;
+  padding: var(--space-32);
+  display: grid;
+  place-items: center;
+  background: var(--primary-background-color);
+  border-block-end: 1px solid var(--layout-border-color);
+}
+
+.editor {
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: var(--font-size-text2);
+  background: var(--inverted-color-background);
+}
+
+.error {
+  margin: 0;
+  padding: var(--space-16);
+  font-family: ui-monospace, "SFMono-Regular", Consolas, monospace;
+  font-size: var(--font-size-text3);
+  color: var(--negative-color);
+  background: var(--negative-color-selected);
+  white-space: pre-wrap;
+}

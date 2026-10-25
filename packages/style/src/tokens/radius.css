@@ -1,0 +1,13 @@
+/*
+ * Good Game border-radius tokens.
+ * Source: Figma "GG Design System V1.3" → Border radius page.
+ * Small: forms, buttons, checkboxes, selected marks, tooltips.
+ * Medium: dropdowns, popovers, attention boxes, updates.
+ * Large: popups.
+ */
+
+:root {
+  --border-radius-small: 4px;
+  --border-radius-medium: 8px;
+  --border-radius-large: 16px;
+}

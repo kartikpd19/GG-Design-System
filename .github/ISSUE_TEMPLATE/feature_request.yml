@@ -1,0 +1,24 @@
+name: Feature request
+description: Suggest a new component, variant, or token
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What problem would this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+      description: The API, variant or token you have in mind.
+  - type: input
+    id: figma
+    attributes:
+      label: Figma link
+      description: New components must exist in the GG Figma file before they're built.
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered

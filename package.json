@@ -1,0 +1,45 @@
+{
+  "name": "goodgame-design-system",
+  "private": true,
+  "description": "Good Game Design System monorepo",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kartikpd19/GG-Design-System.git"
+  },
+  "packageManager": "yarn@1.22.22",
+  "engines": {
+    "node": ">=20"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "resolutions": {
+    "**/vite": "^6.0.7"
+  },
+  "scripts": {
+    "build": "lerna run build --stream",
+    "lint": "eslint . && prettier --check .",
+    "format": "prettier --write .",
+    "typecheck": "lerna run typecheck --stream",
+    "test": "lerna run test --stream",
+    "storybook": "yarn workspace @goodgame/docs storybook",
+    "build-storybook": "yarn workspace @goodgame/docs build-storybook",
+    "sync-tokens": "node scripts/sync-tokens.mjs"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.17.0",
+    "@types/node": "^22.10.5",
+    "eslint": "^9.17.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-jsx-a11y": "^6.10.2",
+    "eslint-plugin-react": "^7.37.3",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "eslint-plugin-storybook": "^0.11.2",
+    "globals": "^15.14.0",
+    "lerna": "^8.1.9",
+    "prettier": "^3.4.2",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.19.0"
+  }
+}

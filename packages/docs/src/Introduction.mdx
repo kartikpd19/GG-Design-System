@@ -1,0 +1,28 @@
+import { Meta } from "@storybook/blocks";
+
+<Meta title="Introduction" />
+
+# Good Game Design System
+
+Good Game is a React + TypeScript component library built from the **GG Design System** Figma file. Every component here maps one-to-one to a Figma component: prop names match Figma variant properties, and all styling comes from design tokens.
+
+## Packages
+
+| Package           | What it is                                  |
+| ----------------- | ------------------------------------------- |
+| `@goodgame/core`  | React components                            |
+| `@goodgame/style` | Design tokens as CSS custom properties      |
+| `@goodgame/icons` | SVG icons as React components (coming soon) |
+
+## Where to start
+
+- **[Getting Started](?path=/docs/getting-started--docs)**: install and set up the library.
+- **[Foundations](?path=/docs/foundations-color--docs)**: color, typography, spacing and radius tokens.
+- **[Catalog](?path=/docs/catalog--docs)**: every component at a glance.
+- **[Playground](?path=/docs/playground--docs)**: write JSX and render components live.
+
+## Principles
+
+- **Figma is the source of truth.** If something in code doesn't match Figma, code is wrong.
+- **Tokens only.** Components never contain hard-coded colors, sizes or spacing.
+- **Accessible by default.** Correct roles, keyboard support and a visible focus ring on every interactive component.

@@ -1,0 +1,15 @@
+---
+description: Conventions for Good Game React components
+globs: packages/core/src/components/**
+alwaysApply: false
+---
+
+- Only build components that exist in the GG Figma file (`2C5ebJzU146r07jIOPVQxk`). Ask when Figma is ambiguous.
+- Prop names match Figma variant property names (camelCased key, Figma option values kept).
+- Folder: `<Name>.tsx`, `<Name>.module.css`, `<Name>.types.ts`, `<Name>.stories.tsx`, `<Name>.mdx`, `<Name>.test.tsx`, `index.ts`.
+- Use `forwardRef`, spread remaining native props, and accept `className`.
+- Prefer native elements (`<button>`, `<input>`), never `div` with `onClick`.
+- Every interactive component: keyboard support, `:focus-visible` outline using `--focus-ring-width`, `--focus-ring-color`, `--focus-ring-offset`, and correct aria attributes (`aria-busy`, `aria-disabled`, `aria-pressed`, …).
+- Stories: Overview, one per variant, Sizes, States, Playground with controls.
+- MDX: description, Import snippet, `<ArgTypes>`, Variants, Do's and Don'ts, Accessibility, Related components.
+- Export from `packages/core/src/index.ts`; register in `packages/docs/src/catalog/registry.tsx`.

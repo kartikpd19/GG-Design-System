@@ -1,0 +1,21 @@
+import { Meta, Source } from "@storybook/blocks";
+import { TypographyScale } from "./Foundations";
+
+<Meta title="Foundations/Typography" />
+
+# Typography
+
+All text uses **Inter**. Each style is a composite `font` token paired with a letter-spacing token:
+
+<Source
+  language="css"
+  dark
+  code={`.title {
+  font: var(--font-h2-medium);
+  letter-spacing: var(--letter-spacing-h2-medium);
+}`}
+/>
+
+Figma naming note: **Medium** styles are SemiBold (600), and heading **Normal** styles are Medium (500). "Normal-link" styles use the matching normal token with `--link-color` and an underline.
+
+<TypographyScale />

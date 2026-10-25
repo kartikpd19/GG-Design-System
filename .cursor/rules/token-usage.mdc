@@ -1,0 +1,12 @@
+---
+description: How to use Good Game design tokens
+globs: "**/*.css"
+alwaysApply: false
+---
+
+- Never hard-code colors, font sizes, spacing, radius or shadows in component CSS. Use `var(--token)` from `@goodgame/style`.
+- Use semantic color tokens (`--primary-color`, `--primary-text-color`, `--ui-border-color`). Palette primitives (`--color-purple-500`) are for defining semantic tokens only.
+- Spacing: `--space-2 … --space-80`. Radius: `--border-radius-small|medium|large`.
+- Typography: `font: var(--font-text2-normal)` plus `letter-spacing: var(--letter-spacing-…)` for headings.
+- Only a light theme exists. Don't add `[data-theme="dark"]` values that aren't in Figma.
+- Missing a token? Check Figma first, add it to `packages/style/src/tokens/*.css`, and document it on the Foundations page.

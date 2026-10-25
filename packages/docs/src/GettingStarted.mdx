@@ -1,0 +1,59 @@
+import { Meta, Source } from "@storybook/blocks";
+
+<Meta title="Getting Started" />
+
+# Getting Started
+
+## 1. Install
+
+<Source language="bash" dark code={`npm install @goodgame/core`} />
+
+## 2. Import tokens once
+
+In your app's root file (for example `main.tsx`):
+
+<Source language="tsx" dark code={`import "@goodgame/core/tokens";`} />
+
+## 3. Load Inter
+
+All typography tokens use **Inter**. Add it to your HTML `<head>`:
+
+<Source
+  language="html"
+  dark
+  code={`<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />`}
+/>
+
+## 4. Use components
+
+<Source
+  language="tsx"
+  dark
+  code={`import { Button } from "@goodgame/core";
+
+export function Example() {
+  return <Button>Save</Button>;
+}`}
+/>
+
+## Using tokens in your own CSS
+
+<Source
+  language="css"
+  dark
+  code={`.card {
+  background: var(--primary-background-color);
+  color: var(--primary-text-color);
+  padding: var(--space-16);
+  border-radius: var(--border-radius-medium);
+  font: var(--font-text2-normal);
+}`}
+/>
+
+## Themes
+
+Themes switch with a `data-theme` attribute on any ancestor element. Only the **light** theme is designed today; dark tokens will ship once they're designed in Figma.
+
+<Source language="html" dark code={`<html data-theme="light">`} />
