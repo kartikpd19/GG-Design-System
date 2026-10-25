@@ -10,10 +10,13 @@ const config: StorybookConfig = {
     "../../core/src/**/*.stories.@(ts|tsx)",
   ],
   addons: [
-    "@storybook/addon-essentials",
+    {
+      name: "@storybook/addon-essentials",
+      // Hide the grid/background, outline and measure toolbar buttons.
+      options: { backgrounds: false, outline: false, measure: false },
+    },
     "@storybook/addon-a11y",
     "@storybook/addon-interactions",
-    "@storybook/addon-themes",
   ],
   framework: { name: "@storybook/react-vite", options: {} },
   docs: { defaultName: "Docs" },
