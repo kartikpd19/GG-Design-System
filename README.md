@@ -1,4 +1,3 @@
-<!-- Banner: add your image at .github/assets/banner.png -->
 <p align="center">
   <img src=".github/assets/banner.png" alt="Good Game Design System" width="100%" />
 </p>
