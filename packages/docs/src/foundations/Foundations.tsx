@@ -30,7 +30,7 @@ function ColorSwatch({ name, description }: TokenDoc) {
       <div className={styles.swatchColor} style={{ background: `var(--${name})` }} />
       <div className={styles.swatchMeta}>
         <code className={styles.tokenName}>--{name}</code>
-        <span className={styles.tokenValue}>{value}</span>
+        <span className={styles.tokenValue}>{value.toUpperCase()}</span>
         <span className={styles.description}>{description}</span>
       </div>
     </div>
@@ -43,7 +43,7 @@ export function ColorTokens() {
       {colorGroups.map((group) => (
         <section key={group.title} className={styles.section}>
           <h3 className={styles.groupTitle}>{group.title}</h3>
-          <div className={styles.swatchGrid}>
+          <div className={`sb-unstyled ${styles.swatchGrid}`}>
             {group.tokens.map((t) => (
               <ColorSwatch key={t.name} {...t} />
             ))}
@@ -81,7 +81,7 @@ export function PaletteRamps() {
           <h3 className={styles.groupTitle}>
             {ramp.title} <code className={styles.tokenName}>--{ramp.prefix}-*</code>
           </h3>
-          <div className={styles.ramp}>
+          <div className={`sb-unstyled ${styles.ramp}`}>
             {rampSteps.map((step) => (
               <RampStep key={step} prefix={ramp.prefix} step={step} />
             ))}
@@ -98,7 +98,7 @@ export function TypographyScale() {
       {typeScale.map((group) => (
         <section key={group.title} className={styles.section}>
           <h3 className={styles.groupTitle}>{group.title}</h3>
-          <div className={styles.table}>
+          <div className={`sb-unstyled ${styles.table}`}>
             {group.styles.map((s) => (
               <div key={s.label} className={styles.typeRow}>
                 <code className={styles.tokenName}>--font-{s.token}</code>
@@ -139,7 +139,7 @@ function SpacingRow({ name, description }: TokenDoc) {
 
 export function SpacingScale() {
   return (
-    <div className={styles.table}>
+    <div className={`sb-unstyled ${styles.table}`}>
       {spacingScale.map((t) => (
         <SpacingRow key={t.name} {...t} />
       ))}
@@ -164,7 +164,7 @@ function ElevationSample({ name, description, size }: TokenDoc & { size: number 
 
 export function ElevationScale() {
   return (
-    <div className={styles.elevationGrid}>
+    <div className={`sb-unstyled ${styles.elevationGrid}`}>
       {[...elevationScale].reverse().map((t) => (
         <ElevationSample key={t.name} {...t} />
       ))}
@@ -187,7 +187,7 @@ function RadiusSample({ name, description }: TokenDoc) {
 
 export function RadiusScale() {
   return (
-    <div className={styles.radiusGrid}>
+    <div className={`sb-unstyled ${styles.radiusGrid}`}>
       {radiusScale.map((t) => (
         <RadiusSample key={t.name} {...t} />
       ))}

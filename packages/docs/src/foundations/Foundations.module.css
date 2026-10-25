@@ -25,7 +25,6 @@
 .tokenValue {
   font: var(--font-text3-normal);
   color: var(--secondary-text-color);
-  text-transform: uppercase;
 }
 
 .description {
