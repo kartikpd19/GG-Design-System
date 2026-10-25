@@ -172,15 +172,30 @@ export function ElevationScale() {
   );
 }
 
-function RadiusSample({ name, description }: TokenDoc) {
+function RadiusSample({
+  name,
+  description,
+  size,
+  lens,
+}: TokenDoc & { size: number; lens: number }) {
   const { ref, value } = useTokenValue(name);
+  // Box sits down-right of the magnifier, as on the Figma page.
+  const offset = Math.round(lens * 0.45);
   return (
     <div className={styles.radiusItem} ref={ref}>
-      <div className={styles.radiusBox} style={{ borderRadius: `var(--${name})` }}>
-        {value}
+      <span className={styles.radiusLabel}>{description}</span>
+      <div className={styles.radiusFigure} style={{ width: size + offset, height: size + offset }}>
+        <div
+          className={styles.radiusBox}
+          style={{ width: size, height: size, borderRadius: `var(--${name})` }}
+        >
+          {value}
+        </div>
+        <div className={styles.radiusLens} style={{ width: lens, height: lens }} aria-hidden>
+          <span className={styles.radiusLensCorner} />
+        </div>
       </div>
       <code className={styles.tokenName}>--{name}</code>
-      <span className={styles.description}>{description}</span>
     </div>
   );
 }

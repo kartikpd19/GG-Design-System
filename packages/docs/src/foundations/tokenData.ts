@@ -235,14 +235,9 @@ export const elevationScale: (TokenDoc & { size: number })[] = [
   { name: "box-shadow-extra-large", description: "Extra large elements", size: 160 },
 ];
 
-export const radiusScale: TokenDoc[] = [
-  {
-    name: "border-radius-small",
-    description: "Forms, buttons, checkboxes, selected marks and tooltips",
-  },
-  {
-    name: "border-radius-medium",
-    description: "Dropdowns, popovers, attention boxes and updates",
-  },
-  { name: "border-radius-large", description: "Popups" },
+// Sizes mirror the Figma Border radius page (element box + corner magnifier).
+export const radiusScale: (TokenDoc & { size: number; lens: number })[] = [
+  { name: "border-radius-small", description: "Small elements", size: 40, lens: 30 },
+  { name: "border-radius-medium", description: "Medium elements", size: 80, lens: 48 },
+  { name: "border-radius-large", description: "Large elements", size: 160, lens: 68 },
 ];
